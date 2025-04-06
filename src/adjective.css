@@ -1,0 +1,244 @@
+body {
+  background: rgb(0, 0, 0);
+  font-family: monospace;
+  color: rgb(250, 112, 154);
+}
+
+header {
+  margin: 0 auto;
+  text-shadow: 0 0 15px rgb(254, 225, 64);
+  padding-bottom: 5px;
+}
+
+header .heading {
+  text-align: center;
+  font-weight: 900;
+  font-size: 40px;
+  line-height: 40px;
+  margin: 0;
+  padding: 10px 15px;
+}
+
+header .description {
+  text-align: center;
+  font-weight: 400;
+  font-size: 25px;
+  line-height: 10px;
+  font-style: italic;
+  margin: 0;
+  padding: 15px 10px;
+}
+
+header .tagline {
+  font-weight: 250;
+  font-size: 17px;
+  line-height: 15px;
+  margin: 0;
+  text-align: center;
+}
+
+main {
+  margin: 0 auto;
+  padding: 5px;
+}
+
+.meal-container {
+  display: block;
+  justify-content: space-evenly;
+  margin: 0 auto;
+}
+
+.meal-container .meal-details {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  right: 30px;
+  width: 100%;
+  padding: 0 10px;
+  gap: 30px;
+}
+
+.meal-details .meal-type {
+  display: flex;
+  position: relative;
+  justify-content: space-evenly;
+  list-style: none;
+  list-style-position: inside;
+  width: 50%;
+  gap: 15px;
+}
+
+.meal-details .meal-type .label {
+  font-size: 22px;
+  font-weight: 600;
+  bottom: 30px;
+  text-align: center;
+  text-shadow: 0 0 15px rgb(254, 225, 64);
+}
+
+.meal-details .meal-type img {
+  border: none;
+  border-bottom-left-radius: 25px;
+  border-top-right-radius: 25px;
+  background: linear-gradient(
+    to bottom,
+    rgb(250, 112, 154) 5%,
+    rgb(254, 225, 64) 95%
+  );
+  width: 100px;
+  height: 100px;
+  padding: 5px;
+  transition: all 150ms ease-in-out;
+}
+
+.meal-type img:hover {
+  box-shadow: 0 0 20px rgb(250, 112, 154) inset, 0 0 30px rgb(254, 225, 64);
+  cursor: pointer;
+}
+
+.meal-details .meal-parameters {
+  position: relative;
+  width: 50%;
+}
+
+.meal-parameters .meal-particulars {
+  position: relative;
+  border: none;
+  background: linear-gradient(
+    to bottom,
+    rgb(250, 112, 154) 0%,
+    rgb(254, 225, 64) 90%
+  );
+  border-bottom-left-radius: 25px;
+  border-top-right-radius: 25px;
+  width: 100%;
+  line-height: 1.5;
+  top: 40px;
+  margin: 6px 0 auto;
+  padding: 3px;
+}
+
+.meal-particulars .form-textbox {
+  background: rgb(0, 0, 0);
+  color: rgb(250, 112, 154);
+  width: 82%;
+  line-height: 1.5;
+  font-weight: 500;
+  border: none;
+  border-bottom-left-radius: 25px;
+  text-align: center;
+  transition: all 200ms ease-in-out;
+}
+
+.form-textbox:hover {
+  box-shadow: 0 0 12px rgb(254, 225, 64) inset;
+}
+
+.meal-particulars .form-button {
+  background: rgb(0, 0, 0);
+  color: rgb(250, 112, 154);
+  width: 16%;
+  font-weight: 500;
+  line-height: 1.5;
+  border: 2px solid rgb(0, 0, 0);
+  border-top-right-radius: 25px;
+}
+
+.form-button:hover {
+  box-shadow: 0 0 12px rgb(250, 112, 154) inset;
+  cursor: pointer;
+}
+
+.meal-container .submit {
+  border: none;
+  border-bottom-left-radius: 25px;
+  border-top-right-radius: 25px;
+  background: linear-gradient(
+    to bottom,
+    rgb(250, 112, 154) 5%,
+    rgb(254, 225, 64) 95%
+  );
+  width: 50%;
+  padding: 4px 0;
+  margin: 0 auto;
+}
+
+.meal-container .submit button {
+  display: block;
+  position: relative;
+  background: rgb(0, 0, 0);
+  color: rgb(250, 112, 154);
+  border: 2px solid rgb(0, 0, 0);
+  width: 98%;
+  line-height: 1.35;
+  font-weight: 600;
+  left: 7px;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  transition: all 200ms ease-in-out;
+}
+
+.submit button:hover {
+  box-shadow: 0 0 10px rgb(254, 225, 64) inset, 0 0 18px rgb(250, 112, 154);
+  cursor: pointer;
+}
+
+.meal-container .note-section {
+  display: flex;
+  justify-content: space-between;
+  width: 98%;
+  margin: 0 auto;
+  padding: 15px;
+  gap: 10px;
+}
+
+.note-section .ingredients-list {
+  background: linear-gradient(
+    to bottom,
+    rgb(250, 112, 154, 0.8) 0%,
+    rgb(254, 225, 64, 0.8) 100%
+  );
+  width: 25%;
+  border-bottom-left-radius: 25px;
+}
+
+.note-section .chaotic-list {
+  display: flex;
+  justify-content: space-evenly;
+  list-style: none;
+  list-style-position: inside;
+  padding: 0 6px;
+  color: rgb(0, 0, 0);
+  text-align: start;
+}
+
+.note-section .recipe {
+  background: linear-gradient(
+    to bottom,
+    rgb(250, 112, 154, 0.8) 0%,
+    rgb(254, 225, 64, 0.8) 100%
+  );
+  width: 75%;
+  text-align: center;
+  border-top-right-radius: 25px;
+  color: rgb(0, 0, 0);
+}
+
+.hidden {
+}
+
+.fineprint {
+  position: relative;
+  font-size: 12px;
+  text-align: center;
+  bottom: 0;
+}
+
+a {
+  text-decoration: none;
+  color: rgb(254, 225, 64);
+}
+
+a:hover {
+  text-shadow: 0 0 5px rgb(254, 225, 64);
+}
