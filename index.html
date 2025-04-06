@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <script src="https://unpkg.com/axios@1.6.7/dist/axios.min.js"></script>
+    <link rel="stylesheet" href="src/adjective.css" />
+    <title>Meal Invent</title>
+  </head>
+  <body>
+    <div>
+      <header>
+        <h1 class="heading">Meal Invent 2.0</h1>
+        <h2 class="description">
+          the meal inventory designed to make it easier to plan and track what
+          you eat
+        </h2>
+        <hr />
+        <h3 class="tagline">Craft your meals. Defeat your hunger</h3>
+      </header>
+      <main>
+        <div class="meal-container">
+          <div class="meal-details">
+            <ul class="meal-type">
+              <li id="breakfast">
+                <p class="label">breakfast</p>
+                <img
+                  src="C:/Users/Phi Ndlovu/Pictures/Random Pics/Om Nom Noms/b7de2ec9-2778-4fb8-8f45-9a1b7fc30135.jpeg"
+                  alt="bear shaped pancakes"
+                />
+              </li>
+              <li id="lunch">
+                <p class="label">lunch</p>
+                <img
+                  src="C:/Users/Phi Ndlovu/Pictures/Random Pics/Om Nom Noms/Beet Hummus Veggie Collard Wraps - Healthy Little Vittles.jpeg"
+                  alt="collard veggie wraps"
+                />
+              </li>
+              <li id="dinner">
+                <p class="label">dinner</p>
+                <img
+                  src="C:/Users/Phi Ndlovu/Pictures/Random Pics/Om Nom Noms/1517395622671.jpg"
+                  alt="sushi donuts"
+                />
+              </li>
+              <li id="snack">
+                <p class="label">snack</p>
+                <img
+                  src="C:/Users/Phi Ndlovu/Pictures/Random Pics/Om Nom Noms/b6f39889-b2b8-480d-b3b2-e92e7d3492a5.jpeg"
+                  alt="tomato & cucumber on a biscuit"
+                />
+              </li>
+              <li id="drink">
+                <p class="label">drink</p>
+                <img
+                  src="C:/Users/Phi Ndlovu/Pictures/Random Pics/Om Nom Noms/Fresh Strawberry Water (Agua Fresca) - Savvy Naturalista.jpeg"
+                  alt="agua fresca in strawberry flavour"
+                />
+              </li>
+            </ul>
+            <div class="meal-parameters">
+              <form class="meal-particulars" id="region">
+                <input
+                  class="form-textbox"
+                  id="region-text"
+                  type="text"
+                  placeholder="Which regional cuisine globally?"
+                />
+                <input class="form-button" id="region-btn" type="submit" />
+              </form>
+              <form class="meal-particulars" id="ingredients">
+                <input
+                  class="form-textbox"
+                  id="ingredients-text"
+                  type="text"
+                  placeholder="What are the main ingredients?"
+                />
+                <input class="form-button" id="ingredients-btn" type="submit" />
+              </form>
+              <form class="meal-particulars" id="diet">
+                <input
+                  class="form-textbox"
+                  id="diet-text"
+                  type="text"
+                  placeholder="Is there a special diet constraint?"
+                />
+                <input class="form-button" id="diet-btn" type="submit" />
+              </form>
+              <form class="meal-particulars" id="allergies">
+                <input
+                  class="form-textbox"
+                  id="allergies-text"
+                  type="text"
+                  placeholder="Are there any allergies/intolerances?"
+                />
+                <input class="form-button" id="allergies-btn" type="submit" />
+              </form>
+            </div>
+          </div>
+          <div class="submit">
+            <button id="submit-all">invent meal!</button>
+          </div>
+          <div class="note-section hidden">
+            <div class="ingredients-list">
+              <ul class="chaotic-list">
+                <li>apples</li>
+                <li>cinnamon</li>
+                <li>puff pastry</li>
+                <li>limonene</li>
+                <li>almonds</li>
+              </ul>
+            </div>
+            <div class="recipe">
+              <p>
+                You put some cholocate and some lobster, some egg and some pie,
+                and then you mix it all together and... Well, who knows what you
+                do in this vast and unending magnitude. Try to eat well. Live
+                well and be well I suppose.
+              </p>
+            </div>
+          </div>
+        </div>
+      </main>
+      <footer class="fineprint">
+        This AI project was coded by
+        <a href="https://github.com/Nova-Ndlovu">Nova Ndlovu</a> and is open
+        sourced on
+        <a href="https://github.com/Nova-Ndlovu/Project-AI-Add-on">Github</a>
+        and is hosted on <a href="https://meal-invent.netlify.app/">Netlify</a>.
+      </footer>
+      <script src="src/verb.js"></script>
+    </div>
+  </body>
+</html>
