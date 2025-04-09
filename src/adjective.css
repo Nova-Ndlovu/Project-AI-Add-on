@@ -65,6 +65,7 @@ main {
   list-style: none;
   list-style-position: inside;
   width: 98%;
+  margin: 26px 0 auto;
 }
 
 .meal-type .label {
@@ -90,13 +91,14 @@ main {
 }
 
 .meal-type img:hover {
+  transform: scale(1.2);
   box-shadow: 0 0 20px rgb(250, 112, 154) inset, 0 0 30px rgb(254, 225, 64);
   cursor: pointer;
 }
 
 .meal-details .meal-parameters {
   display: flex;
-  margin: 0 auto;
+  margin: 20px 0 auto;
   width: 98%;
   line-height: 1.6;
   gap: 20px;
@@ -115,7 +117,7 @@ main {
   border-top-right-radius: 25px;
   width: 510px;
   line-height: 1.6;
-  margin: 16px 0 auto;
+  margin: 26px 0 auto;
   padding: 3px;
   left: 150px;
 }
@@ -136,44 +138,6 @@ main {
 .form-textbox:hover {
   text-shadow: 0 0 6px rgb(250, 112, 154);
   box-shadow: 0 0 12px rgb(254, 225, 64) inset;
-}
-
-.meal-details .submit {
-  position: relative;
-  border: none;
-  border-bottom-left-radius: 25px;
-  border-top-right-radius: 25px;
-  background: linear-gradient(
-    to bottom,
-    rgb(250, 112, 154) 5%,
-    rgb(254, 225, 64) 95%
-  );
-  top: 30px;
-  left: 7px;
-  width: 50%;
-  padding: 4px 0;
-  margin: 0 auto;
-}
-
-.meal-container .submit button {
-  display: block;
-  position: relative;
-  background: rgb(0, 0, 0);
-  color: rgb(2, 255, 200);
-  border: 2px solid rgb(0, 0, 0);
-  width: 98%;
-  line-height: 1.4;
-  font-weight: 600;
-  left: 7px;
-  border-top-right-radius: 25px;
-  border-bottom-left-radius: 25px;
-  text-shadow: 0 0 6px rgb(250, 112, 154);
-  transition: all 200ms ease-in-out;
-}
-
-.submit button:hover {
-  box-shadow: 0 0 18px rgb(254, 225, 64) inset, 0 0 30px rgb(250, 112, 154);
-  cursor: pointer;
 }
 
 .meal-container .note-section {
@@ -249,6 +213,7 @@ main {
     rgb(254, 225, 64, 0.8) 100%
   );
   width: 96%;
+  height: max-content;
   text-align: center;
   border-top-right-radius: 25px;
   color: rgb(0, 0, 0);
