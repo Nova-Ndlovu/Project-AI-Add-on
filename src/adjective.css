@@ -32,7 +32,7 @@ header .description {
 
 header .tagline {
   font-weight: 250;
-  font-size: 17px;
+  font-size: 15px;
   line-height: 15px;
   color: rgb(2, 255, 200);
   margin: 0;
@@ -42,6 +42,13 @@ header .tagline {
 main {
   margin: 0 auto;
   padding: 5px;
+  pointer-events: auto;
+  transition: all 250ms ease-in-out;
+}
+
+main.active {
+  filter: blur(15px);
+  pointer-events: none;
 }
 
 .meal-container {
@@ -65,12 +72,12 @@ main {
   list-style: none;
   list-style-position: inside;
   width: 98%;
-  margin: 26px 0 auto;
+  margin: 25px 0 auto;
 }
 
 .meal-type .label {
-  font-size: 22px;
-  font-weight: 500;
+  font-size: 20px;
+  font-weight: 400;
   text-align: center;
   text-shadow: 0 0 15px rgb(254, 225, 64);
 }
@@ -141,7 +148,6 @@ main {
 }
 
 .meal-container .note-section {
-  display: block;
   position: relative;
   width: 92%;
   margin: 0 auto;
@@ -179,7 +185,8 @@ main {
     from var(--angle),
     rgb(250, 112, 154),
     rgb(254, 225, 64),
-    rgb(2, 255, 200)
+    rgb(2, 255, 200),
+    transparent
   );
   height: 100%;
   width: 100%;
@@ -207,25 +214,69 @@ main {
 }
 
 .note-section .recipe {
+  position: absolute;
+  justify-content: center;
+  align-items: center;
   background: linear-gradient(
     to bottom,
-    rgb(250, 112, 154, 0.8) 0%,
-    rgb(254, 225, 64, 0.8) 100%
+    rgb(250, 112, 154) 0%,
+    rgb(254, 225, 64) 100%
   );
-  width: 96%;
-  height: max-content;
-  text-align: center;
-  border-top-right-radius: 25px;
   color: rgb(0, 0, 0);
-  margin: 30px 0 auto;
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  width: 86%;
+  height: fit-content;
+  left: -100%;
+  padding: 10px;
+  font-size: 15px;
+  opacity: 0;
+  transform: scale(0.9);
+  text-align: center;
+  transition: 300ms ease-in-out;
+  transition-delay: 200ms;
+  z-index: 100;
+}
+
+.note-section .recipe.active {
+  left: 9%;
+  top: -300px;
+  feild-sizing: content;
+  opacity: 1;
+  transform: scale(1);
+}
+
+ .exit {
+  background: linear-gradient(
+    to bottom,
+    rgb(250, 112, 154) 0%,
+    rgb(254, 225, 64) 100%
+  );
+  border-top-right-radius: 25px;
+  border-bottom-left-radius: 25px;
+  width: 9%;
+  font-size: 20px;
+  font-weight: 400;
+  text-shadow: 0 0 15px rgb(254, 225, 64);
+  transition: all 150ms ease-in-out;
+}
+
+.exit:hover {
+  background: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0.8) 0%,
+    rgb(0, 0, 0) 100%
+  );
+  background: rgb(0, 0, 0);
+  color: rgb(2, 255, 200);
+  cursor: pointer;
+  text-shadow: 0 0 15px rgb(254, 225, 64);
 }
 
 .fineprint {
-  position: relative;
   font-size: 12px;
   text-align: center;
   margin: 5px 0 auto;
-  bottom: 0;
 }
 
 a {

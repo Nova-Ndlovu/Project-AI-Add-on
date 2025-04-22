@@ -1,6 +1,22 @@
 function displayMeal(response) {
+  event.stopPropagation();
+
+  let notes = document.querySelector("#note-section");
   let recipe = document.querySelector("#recipe");
+  let loadingRecipe = document.querySelector("#load-screen");
+  let exitBtn = document.querySelector("#exit-btn");
+
+  notes.classList.add("active");
+  recipe.classList.add("active");
+  
   recipe.innerHTML = `${response.data.answer}`;
+  loadingRecipe.classList.add("hidden");
+
+    function clearPage() {
+    notes.classList.remove("active");
+    recipe.classList.remove("active");
+  };
+  exitBtn.addEventListener("click", clearPage);
 
   confetti({
     particleCount: 100,
@@ -11,6 +27,7 @@ function displayMeal(response) {
       y: Math.random() - 0.2,
     },
   });
+  
   console.log(response.data.answer);
 }
 
@@ -46,7 +63,6 @@ function handleParameterSubmit(event) {
   let mealTypes = ["breakfast", "lunch", "dinner", "snack", "drink"];
 
   function ParameterSubmit(event) {
-    event.stopPropagation();
     let selectedMeal = event.target.id;
     let mainOption;
 
@@ -57,20 +73,18 @@ function handleParameterSubmit(event) {
       console.error("Invalid meal type selected");
     }
 
-    let loadingRecipe = document.querySelector("#notes-section");
-    loadingRecipe.classList.remove("hidden");
   }
 
-  inventMeal(prompt.value);
-  inventMeal(regionPrompt.value);
-  inventMeal(ingredientsPrompt.value);
-  inventMeal(dietPrompt.value);
-  inventMeal(allergiesPrompt.value);
+  inventMeal(prompt.value + mealTypes.value + regionPrompt.value + ingredientsPrompt.value + dietPrompt.value + 
+  allergiesPrompt.value);
 
-  prompt = `Please create a ${mealTypes} recipe based on ${regionPrompt} cuisine, that includes ${ingredientsPrompt} as main ingredients, has ${dietPrompt} requirements, and expressly excludes ${allergiesPrompt}.
-  Save the complete list of ingredients for the recipe you have provided and display the list in italics.
-  Save and display the name of the recipe you have provided as the <h1> heading.
+    prompt = `Please create a ${mealTypes.value} recipe that is based on ${regionPrompt.value} cuisine, that highlights ${ingredientsPrompt.value} as the main ingredients of the recipe, is in line with ${dietPrompt.value} requirements, and specifically excludes & prohibits the use of ${allergiesPrompt.value}.
+  Save the complete list of ingredients for the recipe you have provided and display this list in italics.
+  Save and display the name of the recipe you have provided as the <h1> heading in html.
   Save and display the simplistic instructions on how to prepare the meal recipe.`;
+  
+    let loadingRecipe = document.querySelector("#load-screen");
+  loadingRecipe.classList.remove("hidden");
 }
 
 let breakfast = document.querySelector("#breakfast");
