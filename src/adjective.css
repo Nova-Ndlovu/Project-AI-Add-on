@@ -71,7 +71,7 @@ main.active {
   justify-content: space-evenly;
   list-style: none;
   list-style-position: inside;
-  width: 98%;
+  width: 96%;
   margin: 25px 0 auto;
 }
 
@@ -160,7 +160,7 @@ main.active {
 
 .note-section .loading-screen {
   position: relative;
-  margin: 40px auto;
+  margin: 28px auto;
   background-color: rgb(0, 0, 0);
   width: 45%;
   height: 4vh;
@@ -195,7 +195,7 @@ main.active {
   translate: -50% -50%;
   border-top-right-radius: 25px;
   border-bottom-left-radius: 25px;
-  padding: 6px;
+  padding: 4px;
   z-index: -1;
   animation: 2s loading linear infinite;
 }
@@ -234,43 +234,42 @@ main.active {
   transform: scale(0.9);
   text-align: center;
   transition: 300ms ease-in-out;
-  transition-delay: 200ms;
+  transition-delay: 300ms;
   z-index: 100;
 }
 
 .note-section .recipe.active {
   left: 9%;
   top: -300px;
-  feild-sizing: content;
+  height: fit-content;
   opacity: 1;
   transform: scale(1);
 }
 
- .exit {
-  background: linear-gradient(
-    to bottom,
-    rgb(250, 112, 154) 0%,
-    rgb(254, 225, 64) 100%
-  );
+.meal-container .exit {
+  display: flex;
+  flex-direction: column;
+  align-content: right;
+  position: relative;
+  justify-content: right;
+  background: rgb(0, 0, 0);
   border-top-right-radius: 25px;
   border-bottom-left-radius: 25px;
-  width: 9%;
-  font-size: 20px;
-  font-weight: 400;
-  text-shadow: 0 0 15px rgb(254, 225, 64);
+  width: 5%;
+  font-size: 18px;
+  right: -86%;
   transition: all 150ms ease-in-out;
+  z-index: 110;
 }
 
 .exit:hover {
   background: linear-gradient(
     to bottom,
-    rgba(0, 0, 0, 0.8) 0%,
-    rgb(0, 0, 0) 100%
+    rgb(250, 112, 154) 0%,
+    rgb(254, 225, 64) 100%
   );
-  background: rgb(0, 0, 0);
-  color: rgb(2, 255, 200);
+  color: rgb(0, 0, 0);
   cursor: pointer;
-  text-shadow: 0 0 15px rgb(254, 225, 64);
 }
 
 .fineprint {
